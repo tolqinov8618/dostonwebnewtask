@@ -1,0 +1,507 @@
+ 
+ <!-- Интернет маганиз -->
+ 
+ <!-- <!DOCTYPE html> 
+<html>
+<head>
+    <title>Интернет-магазин</title>
+    <style>
+        .low-stock {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Интернет-магазин</h1>
+
+    <h2>Добавить товар</h2>
+    <form id="add-product-form">
+        <label for="name">Название товара:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="quantity">Количество:</label><br>
+        <input type="number" id="quantity" name="quantity"><br>
+        <label for="price">Цена:</label><br>
+        <input type="number" id="price" name="price"><br>
+        <input type="submit" value="Добавить товар">
+    </form>
+
+    <h2>Список товаров</h2>
+    <table id="product-list">
+        <tr>
+            <th>№</th>
+            <th>Название товара</th>
+            <th>Кол-во</th>
+            <th>Цена</th>
+        </tr>
+    </table>
+
+    <h2>Купить товар</h2>
+    <form id="buy-product-form">
+            <label for="buy-name">Название товара:</label><br>
+            <input type="text" id="buy-name" name="buy-name"><br>
+        <br>
+        <label for="buy-quantity">Количество:</label><br>
+        <input type="number" id="buy-quantity" name="buy-quantity"><br>
+        <input type="submit" value="Купить товар">
+    </form>
+
+    <h2>Купленные товары</h2>
+    <table id="purchased-products">
+        <tr>
+            <th>№</th>
+            <th>Название товара</th>
+            <th>Кол-во</th>
+            <th>Общая цена</th>
+        </tr>
+      Купленные товары будут добавлены сюда динамически 
+    </table>
+    <script>
+        // Создаем массив для хранения товаров и купленных товаров
+let products = [];
+let purchasedProducts = [];
+
+// Функция для добавления товара
+function addProduct(name, quantity, price) {
+    // Проверяем, являются ли количество и цена целыми числами
+    if (!Number.isInteger(quantity) || !Number.isInteger(price)) {
+        alert("Количество и цена должны быть целыми числами");
+        return;
+    }
+
+    // Проверяем, есть ли уже такой товар в списке
+    for (let i = 0; i < products.length; i++) {
+        if (products[i].name === name) {
+            // Если товар уже есть, обновляем количество и цену
+            products[i].quantity += quantity;
+            products[i].price = price;
+            return;
+        }
+    }
+
+    // Если товара еще нет, добавляем его в список
+    products.push({ name: name, quantity: quantity, price: price });
+}
+
+// Функция для отображения списка товаров
+function displayProducts() {
+    let table = document.getElementById("product-list");
+    // Очищаем таблицу
+    while (table.rows.length > 1) {
+        table.deleteRow(1);
+    }
+    // Добавляем товары в таблицу
+    for (let i = 0; i < products.length; i++) {
+        let product = products[i];
+        let row = table.insertRow();
+        row.insertCell().innerText = i + 1;
+        row.insertCell().innerText = product.name;
+        let quantityCell = row.insertCell();
+        quantityCell.innerText = product.quantity;
+        if (product.quantity < 3) {
+            quantityCell.classList.add("low-stock");
+        }
+        row.insertCell().innerText = product.price;
+    }
+}
+
+// Функция для покупки товара
+function buyProduct(name) {
+    // Ищем товар в списке
+    for (let i = 0; i < products.length; i++) {
+        if (products[i].name === name) {
+            // Если товар найден и его достаточно на складе, обновляем количество
+            if (products[i].quantity > 0) {
+                products[i].quantity -= 1;
+                purchasedProducts.push({ name: name, quantity: 1, total: products[i].price });
+                return;
+            } else {
+                alert("Недостаточно товара на складе");
+                return;
+            }
+        }
+    }
+
+    alert("Товар не найден");
+}
+
+// Функция для отображения списка купленных товаров
+function displayPurchasedProducts() {
+    let table = document.getElementById("purchased-products");
+    // Очищаем таблицу
+    while (table.rows.length > 1) {
+        table.deleteRow(1);
+    }
+    // Добавляем купленные товары в таблицу
+    let totalQuantity = 0;
+    let totalPrice = 0;
+    for (let i = 0; i < purchasedProducts.length; i++) {
+        let product = purchasedProducts[i];
+        let row = table.insertRow();
+        row.insertCell().innerText = i + 1;
+        row.insertCell().innerText = product.name;
+        row.insertCell().innerText = product.quantity;
+        row.insertCell().innerText = product.total;
+        totalQuantity += product.quantity;
+        totalPrice += product.total;
+    }
+    // Добавляем строку итого
+    let row = table.insertRow();
+    row.insertCell().innerText = "Итого:";
+    row.insertCell().innerText = "";
+    row.insertCell().innerText = totalQuantity;
+    row.insertCell().innerText = totalPrice;
+}
+
+// Обработчики событий для форм
+document.getElementById("add-product-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    addProduct(
+        document.getElementById("name").value,
+        parseInt(document.getElementById("quantity").value),
+        parseInt(document.getElementById("price").value)
+    );
+    displayProducts();
+});
+
+document.getElementById("buy-product-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    buyProduct(document.getElementById("buy-name").value);
+    displayProducts();
+    displayPurchasedProducts();
+});
+
+    </script>
+</body>
+</html> -->
+
+ <!-- Интернет маганиз -->
+
+ <!-- ------------------------------------------------------------------------------------- -->
+
+ <!-- Конференц-система -->
+
+ <!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Конференц-система</title>
+    <style>
+        .low-stock {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Конференц-система</h1>
+
+    <h2>Добавить отчет</h2>
+    <form id="add-report-form">
+        <label for="speaker">Докладчик:</label><br>
+        <input type="text" id="speaker" name="speaker"><br>
+        <label for="title">Заголовок:</label><br>
+        <input type="text" id="title" name="title"><br>
+        <label for="section">Секция:</label><br>
+        <select id="section" name="section">
+            <option value="Информатика">Информатика</option>
+            <option value="Математика">Математика</option>
+            <option value="Физика">Физика</option>
+        </select><br>
+        <label for="time">Время:</label><br>
+        <input type="datetime-local" id="time" name="time"><br>
+        <input type="submit" value="Добавить отчет">
+    </form>
+
+    <h2>Список отчетов</h2>
+    <table id="report-list">
+        <tr>
+            <th>Дата</th>
+            <th>Время</th>
+            <th>Название доклада</th>
+            <th>Докладчик</th>
+        </tr>
+        Отчеты будут добавлены сюда динамически 
+    </table>
+
+
+    <h2>Поиск отчета</h2>
+    <form id="search-report-form">
+        <label for="search-date">Дата:</label><br>
+        <input type="date" id="search-date" name="search-date"><br>
+        <label for="search-speaker">Докладчик:</label><br>
+        <input type="text" id="search-speaker" name="search-speaker"><br>
+        <input type="submit" value="Поиск отчета">
+    </form>
+    
+
+    <h2>Результаты поиска</h2>
+    <table id="search-results">
+        <tr>
+            <th>№</th>
+            <th>Дата, время</th>
+            <th>Раздел</th>
+            <th>Информация о докладах</th>
+        </tr>
+      Результаты поиска будут добавлены сюда динамически
+    </table>
+
+    <script>// Создаем массив для хранения отчетов
+        let reports = [];
+        
+        
+        // Функция для добавления отчета
+        function addReport(speaker, title, section, time) {
+            // Добавляем новый отчет в список
+            reports.push({ speaker: speaker, title: title, section: section, time: time });
+        }
+        
+            
+        
+        
+        // Функция для отображения списка отчетов
+        function displayReports() {
+            let table = document.getElementById("report-list");
+            // Очищаем таблицу
+            while (table.rows.length > 1) {
+                table.deleteRow(1);
+            }
+            // Добавляем отчеты в таблицу
+            for (let i = 0; i < reports.length; i++) {
+                let report = reports[i];
+                let row = table.insertRow();
+                row.insertCell().innerText = report.time;
+                row.insertCell().innerText = report.title;
+                row.insertCell().innerText = report.speaker;
+            }
+        }
+        
+        
+        
+        
+        // Функция для поиска отчета
+        function searchReport(date, speaker) {
+            // Создаем массив для хранения результатов поиска
+            let results = [];
+        
+            // Ищем отчет в списке
+            for (let i = 0; i < reports.length; i++) {
+                if (reports[i].time.includes(date) && reports[i].speaker.includes(speaker)) {
+                    // Если отчет найден, добавляем его в результаты
+                    results.push(reports[i]);
+                }
+            }
+        
+            if (results.length === 0) {
+                alert("Отчет не найден");
+            }
+        
+            return results;
+        }
+        
+        
+        // Функция для отображения результатов поиска
+        function displaySearchResults(results) {
+            let table = document.getElementById("search-results");
+            // Очищаем таблицу
+            while (table.rows.length > 1) {
+                table.deleteRow(1);
+            }
+            // Добавляем результаты поиска в таблицу
+            for (let i = 0; i < results.length; i++) {
+                let report = results[i];
+                let row = table.insertRow();
+                row.insertCell().innerText = i + 1;
+                row.insertCell().innerText = report.time;
+                row.insertCell().innerText = report.section;
+                row.insertCell().innerText = report.speaker + " " + report.title;
+            }
+        }
+        
+        // Обработчики событий для форм
+        document.getElementById("add-report-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            addReport(
+                document.getElementById("speaker").value,
+                document.getElementById("title").value,
+                document.getElementById("section").value,
+                document.getElementById("time").value
+            );
+            displayReports();
+        });
+        
+        document.getElementById("search-report-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let results = searchReport(
+                document.getElementById("search-date").value,
+                document.getElementById("search-speaker").value
+            );
+            displaySearchResults(results);
+        });
+        </script>
+</body>
+</html>
+-->
+
+ <!-- Конференц-система -->
+
+ <!-- ------------------------------------------------------------------------------------- -->
+
+ <!-- Система «Гостиница -->
+ 
+ <!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Система «Гостиница»</title>
+</head>
+<body>
+    <h1>Система «Гостиница»</h1>
+
+    <h2>Добавить комнату</h2>
+    <form id="add-room-form">
+        <label for="room-number">Номер комнаты:</label><br>
+        <input type="text" id="room-number" name="room-number"><br>
+        <label for="room-type">Тип номера:</label><br>
+        <input type="text" id="room-type" name="room-type"><br>
+        <label for="room-price">Суточная цена:</label><br>
+        <input type="number" id="room-price" name="room-price"><br>
+        <input type="submit" value="Добавить комнату">
+    </form>
+
+    <h2>Список комнат</h2>
+    <table id="room-list">
+        <tr>
+            <th>№</th>
+            <th>Номер номеров</th>
+            <th>Тип</th>
+            <th>Цена</th>
+        </tr>
+       Комнаты будут добавлены сюда динамически 
+    </table>
+
+    <h2>Бронирование номеров</h2>
+<form id="book-room-form">
+    <label for="book-room-number">Номер комнаты:</label><br>
+    <input type="text" id="book-room-number" name="book-room-number"><br>
+    <label for="book-room-date">Дата:</label><br>
+    <input type="date" id="book-room-date" name="book-room-date"><br>
+    <input type="submit" value="Забронировать номер">
+</form>
+
+
+
+    <h2>Заказы</h2>
+    <table id="orders">
+        <tr>
+            <th>№</th>
+            <th>Номер номеров</th>
+            <th>Дата заказа</th>
+            <th>Кол-во дней</th>
+            <th>Общая цена</th>
+        </tr>
+        Заказы будут добавлены сюда динамически 
+    </table>
+
+    <script>
+        // Создаем массивы для хранения комнат и бронирований
+let rooms = [];
+let bookings = [];
+
+// Функция для добавления комнаты
+function addRoom(roomNumber, roomType, roomPrice) {
+    // Добавляем новую комнату в список
+    rooms.push({ roomNumber: roomNumber, roomType: roomType, roomPrice: roomPrice });
+}
+
+// Функция для отображения списка комнат
+function displayRooms() {
+    let table = document.getElementById("room-list");
+    // Очищаем таблицу
+    while (table.rows.length > 1) {
+        table.deleteRow(1);
+    }
+    // Добавляем комнаты в таблицу
+    for (let i = 0; i < rooms.length; i++) {
+        let room = rooms[i];
+        let row = table.insertRow();
+        row.insertCell().innerText = i + 1;
+        row.insertCell().innerText = room.roomNumber;
+        row.insertCell().innerText = room.roomType;
+        row.insertCell().innerText = room.roomPrice;
+    }
+}
+
+// Функция для бронирования номера
+function bookRoom(roomNumber, date) {
+    // Проверяем, существует ли номер комнаты
+    let roomExists = rooms.some(room => room.roomNumber === roomNumber);
+    if (!roomExists) {
+        alert("Такого номера комнаты не существует");
+        return;
+    }
+
+    // Проверяем, забронирован ли уже номер
+    let isBooked = bookings.some(booking => booking.roomNumber === roomNumber && booking.date === date);
+    if (isBooked) {
+        alert("Этот номер уже забронирован на эту дату");
+        return;
+    }
+
+    // Если номер еще не забронирован, добавляем бронирование в список
+    let room = rooms.find(room => room.roomNumber === roomNumber);
+    bookings.push({ roomNumber: roomNumber, date: date, price: room.roomPrice });
+}
+
+// Функция для отображения списка бронирований
+function displayBookings() {
+    let table = document.getElementById("orders");
+    // Очищаем таблицу
+    while (table.rows.length > 1) {
+        table.deleteRow(1);
+    }
+    // Добавляем бронирования в таблицу
+    let totalDays = 0;
+    let totalPrice = 0;
+    for (let i = 0; i < bookings.length; i++) {
+        let booking = bookings[i];
+        let row = table.insertRow();
+        row.insertCell().innerText = i + 1;
+        row.insertCell().innerText = booking.roomNumber;
+        row.insertCell().innerText = booking.date;
+        row.insertCell().innerText = 1; // Предполагаем, что каждое бронирование на 1 день
+        row.insertCell().innerText = booking.price;
+        totalDays += 1;
+        totalPrice += booking.price;
+    }
+    // Добавляем строку итого
+    let row = table.insertRow();
+    row.insertCell().innerText = "Итого:";
+    row.insertCell().innerText = "";
+    row.insertCell().innerText = "";
+    row.insertCell().innerText = totalDays;
+    row.insertCell().innerText = totalPrice;
+}
+
+// Обработчики событий для форм
+document.getElementById("add-room-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    addRoom(
+        document.getElementById("room-number").value,
+        document.getElementById("room-type").value,
+        parseInt(document.getElementById("room-price").value)
+    );
+    displayRooms();
+});
+
+document.getElementById("book-room-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    bookRoom(
+        document.getElementById("book-room-number").value,
+        document.getElementById("book-room-date").value
+    );
+    displayBookings();
+});
+
+    </script>
+</body>
+</html>
+ -->
+ 
+ <!-- Система «Гостиница -->
