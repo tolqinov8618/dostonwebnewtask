@@ -1,0 +1,1966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+        <div class="oop1">
+                <div class="task1">
+                    <!-- // Задания 1.1 	Работа с потоками. Записывать и читать в файл.
+        
+        // using System;
+        // using System.IO;
+        
+        // class Program
+        // {
+        //     static void Main()
+        //     {
+        //         // Запись в файл
+        //         File.WriteAllText(@"D:\file.txt", "Hello, World!");
+        
+        //         // Чтение из файла
+        //         string readText = File.ReadAllText(@"D:\file.txt");
+        //         Console.WriteLine(readText);
+        //     }
+        // }
+        
+        
+        //задание 1.2	Даны натуральные числа n и m, матрицы A и B. Создать класс MAT определяющий максимальный и 
+        //минимальный элемент матрицы, сумма элементов строки А (расположенный минимальный элемент матрицы А)
+        // и В (расположенный максимальный элемент матрицы В) в виде вектора.
+        
+        
+        // using System;
+        // using System.IO;
+        
+        // public class MAT
+        // {
+        //     private int[,] matrix;
+        
+        //     public MAT(int[,] matrix)
+        //     {
+        //         this.matrix = matrix;
+        //     }
+        
+        //     public int MaxElement()
+        //     {
+        //         int max = matrix[0, 0];
+        //         foreach (int i in matrix)
+        //         {
+        //             if (i > max)
+        //                 max = i;
+        //         }
+        //         return max;
+        //     }
+        
+        //     public int MinElement()
+        //     {
+        //         int min = matrix[0, 0];
+        //         foreach (int i in matrix)
+        //         {
+        //             if (i < min)
+        //                 min = i;
+        //         }
+        //         return min;
+        //     }
+        
+        //     public int SumOfRow(int row)
+        //     {
+        //         int sum = 0;
+        //         for (int i = 0; i < matrix.GetLength(1); i++)
+        //         {
+        //             sum += matrix[row, i];
+        //         }
+        //         return sum;
+        //     }
+        // }
+        
+        // class Program
+        // {
+        //     static void Main()
+        //     {
+        //         // Создаем новую матрицу
+        //         int[,] matrix = new int[,] { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
+        
+        //         // Создаем экземпляр класса MAT
+        //         MAT mat = new MAT(matrix);
+        
+        //         // Вызываем методы класса MAT и выводим результаты
+        //         Console.WriteLine("Максимальный элемент: " + mat.MaxElement());
+        //         Console.WriteLine("Минимальный элемент: " + mat.MinElement());
+        //         Console.WriteLine("Сумма элементов первой строки: " + mat.SumOfRow(0));
+        //     }
+        // }
+        
+        //задание 1.3	Создать производный класс VEKTOR базового класса MAT и определить функция-члена, 
+        //умножающий вектор на втором вопросе на матрицу А или В. 
+        
+        // using System;
+        
+        // public class MAT
+        // {
+        //     protected int[,] matrix;
+        
+        //     public MAT(int[,] matrix)
+        //     {
+        //         this.matrix = matrix;
+        //     }
+        
+        //     public int MaxElement()
+        //     {
+        //         int max = matrix[0, 0];
+        //         foreach (int i in matrix)
+        //         {
+        //             if (i > max)
+        //                 max = i;
+        //         }
+        //         return max;
+        //     }
+        
+        //     public int MinElement()
+        //     {
+        //         int min = matrix[0, 0];
+        //         foreach (int i in matrix)
+        //         {
+        //             if (i < min)
+        //                 min = i;
+        //         }
+        //         return min;
+        //     }
+        
+        //     public int SumOfRow(int row)
+        //     {
+        //         int sum = 0;
+        //         for (int i = 0; i < matrix.GetLength(1); i++)
+        //         {
+        //             sum += matrix[row, i];
+        //         }
+        //         return sum;
+        //     }
+        // }
+        
+        // public class VEKTOR : MAT
+        // {
+        //     private int[] vector;
+        
+        //     public VEKTOR(int[,] matrix, int[] vector) : base(matrix)
+        //     {
+        //         this.vector = vector;
+        //     }
+        
+        //     public int[] Multiply()
+        //     {
+        //         int[] result = new int[vector.Length];
+        //         for (int i = 0; i < vector.Length; i++)
+        //         {
+        //             for (int j = 0; j < matrix.GetLength(1); j++)
+        //             {
+        //                 result[i] += vector[j] * matrix[j, i];
+        //             }
+        //         }
+        //         return result;
+        //     }
+        // }
+        
+        // class Program
+        // {
+        //     static void Main()
+        //     {
+        //         // Создаем новую матрицу и вектор
+        //         int[,] matrix = new int[,] { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
+        //         int[] vector = new int[] { 1, 2, 3 };
+        
+        //         // Создаем экземпляр класса VEKTOR
+        //         VEKTOR vektor = new VEKTOR(matrix, vector);
+        
+        //         // Вызываем метод Multiply и выводим результат
+        //         int[] result = vektor.Multiply();
+        //         Console.WriteLine("Результат умножения: " + string.Join(", ", result));
+        //     }
+        // } -->
+        
+        
+                </div>
+                
+                <div class="task2">
+                    <!-- //2.1	Interface и абстрактные классы на языке C#.
+        
+        
+        // // Интерфейс
+        // public interface IAnimal
+        // {
+        //     void Speak();
+        // }
+        
+        // // Абстрактный класс
+        // public abstract class Animal : IAnimal
+        // {
+        //     protected string name;
+        
+        //     public Animal(string name)
+        //     {
+        //         this.name = name;
+        //     }
+        
+        //     public abstract void Speak();
+        // }
+        
+        // // Класс, наследующий от абстрактного класса
+        // public class Dog : Animal
+        // {
+        //     public Dog(string name) : base(name) { }
+        
+        //     public override void Speak()
+        //     {
+        //         Console.WriteLine(name + " говорит: Гав!");
+        //     }
+        // }
+        
+        // class Program
+        // {
+        //     static void Main()
+        //     {
+        //         // Создаем новый объект класса Dog
+        //         Dog myDog = new Dog("Бобик");
+        
+        //         // Вызываем метод Speak
+        //         myDog.Speak();
+        //     }
+        // }
+        
+        
+        
+        
+        
+        //2.2	Создать класс KOMPLEKS выполняющий операции (+, *, -) над двух комплексных чисел заданные в виде строки.
+        
+        // using System;
+        // using System.Numerics;
+        
+        // public class KOMPLEKS
+        // {
+        //     protected Complex number;
+        
+        //     public KOMPLEKS(string complexNumber)
+        //     {
+        //         var parts = complexNumber.Split('+');
+        //         var realPart = double.Parse(parts[0]);
+        //         var imaginaryPart = double.Parse(parts[1].TrimEnd('i'));
+        //         this.number = new Complex(realPart, imaginaryPart);
+        //     }
+        
+        //     public Complex Add(KOMPLEKS other)
+        //     {
+        //         return this.number + other.number;
+        //     }
+        
+        //     public Complex Subtract(KOMPLEKS other)
+        //     {
+        //         return this.number - other.number;
+        //     }
+        
+        //     public Complex Multiply(KOMPLEKS other)
+        //     {
+        //         return this.number * other.number;
+        //     }
+        // }
+        
+        // public class URAVNENIE : KOMPLEKS
+        // {
+        //     public URAVNENIE(string complexNumber) : base(complexNumber) { }
+        
+        //     public Complex[] SolveQuadratic()
+        //     {
+        //         Complex a = 1;
+        //         Complex b = -this.number;
+        //         Complex c = 1;
+        
+        //         Complex discriminant = b * b - 4 * a * c;
+        //         Complex sqrtDiscriminant = Complex.Sqrt(discriminant);
+        
+        //         Complex root1 = (-b + sqrtDiscriminant) / (2 * a);
+        //         Complex root2 = (-b - sqrtDiscriminant) / (2 * a);
+        
+        //         return new Complex[] { root1, root2 };
+        //     }
+        // }
+        
+        // class Program
+        // {
+        //     static void Main()
+        //     {
+        //         // Создаем новые комплексные числа
+        //         KOMPLEKS num1 = new KOMPLEKS("1+2i");
+        //         KOMPLEKS num2 = new KOMPLEKS("3+4i");
+        
+        //         // Выполняем операции и выводим результаты
+        //         Console.WriteLine("Сумма: " + num1.Add(num2));
+        //         Console.WriteLine("Разность: " + num1.Subtract(num2));
+        //         Console.WriteLine("Произведение: " + num1.Multiply(num2));
+        
+        //         // Создаем уравнение и решаем его
+        //         URAVNENIE equation = new URAVNENIE("2+3i");
+        //         Complex[] roots = equation.SolveQuadratic();
+        //         Console.WriteLine("Корни уравнения: " + roots[0] + ", " + roots[1]);
+        //     }
+        // }
+        
+        
+        //2.3	Создать производный класс URAVNENIE базового класса KOMPLEKS и определить функция-члена 
+        //определяющий квадратную уравнению для заданного комплексного числа
+         //(корень квадратного уравнения должна быть комплексные числа на втором вопросе).
+        
+        // using System;
+        // using System.Numerics;
+        
+        // public class KOMPLEKS
+        // {
+        //     protected Complex number;
+        
+        //     public KOMPLEKS(string complexNumber)
+        //     {
+        //         var parts = complexNumber.Split('+');
+        //         var realPart = double.Parse(parts[0]);
+        //         var imaginaryPart = double.Parse(parts[1].TrimEnd('i'));
+        //         this.number = new Complex(realPart, imaginaryPart);
+        //     }
+        
+        //     public Complex Add(KOMPLEKS other)
+        //     {
+        //         return this.number + other.number;
+        //     }
+        
+        //     public Complex Subtract(KOMPLEKS other)
+        //     {
+        //         return this.number - other.number;
+        //     }
+        
+        //     public Complex Multiply(KOMPLEKS other)
+        //     {
+        //         return this.number * other.number;
+        //     }
+        // }
+        
+        // public class URAVNENIE : KOMPLEKS
+        // {
+        //     public URAVNENIE(string complexNumber) : base(complexNumber) { }
+        
+        //     public Complex[] SolveQuadratic()
+        //     {
+        //         Complex a = 1;
+        //         Complex b = -this.number;
+        //         Complex c = 1;
+        
+        //         Complex discriminant = b * b - 4 * a * c;
+        //         Complex sqrtDiscriminant = Complex.Sqrt(discriminant);
+        
+        //         Complex root1 = (-b + sqrtDiscriminant) / (2 * a);
+        //         Complex root2 = (-b - sqrtDiscriminant) / (2 * a);
+        
+        //         return new Complex[] { root1, root2 };
+        //     }
+        // }
+        
+        // class Program
+        // {
+        //     static void Main()
+        //     {
+        //         // Создаем новые комплексные числа
+        //         KOMPLEKS num1 = new KOMPLEKS("1+2i");
+        //         KOMPLEKS num2 = new KOMPLEKS("3+4i");
+        
+        //         // Выполняем операции и выводим результаты
+        //         Console.WriteLine("Сумма: " + num1.Add(num2));
+        //         Console.WriteLine("Разность: " + num1.Subtract(num2));
+        //         Console.WriteLine("Произведение: " + num1.Multiply(num2));
+        
+        //         // Создаем уравнение и решаем его
+        //         URAVNENIE equation = new URAVNENIE("2+3i");
+        //         Complex[] roots = equation.SolveQuadratic();
+        //         Console.WriteLine("Корни уравнения: " + roots[0] + ", " + roots[1]);
+        //     }
+        // } -->
+        
+                </div>   
+        
+                <div class="task3">
+                    <!-- 
+                        //3,1.	Обработка исключений на языке C#.
+        
+        
+        // try
+        // {
+        //     // Код, который может вызвать исключение
+        //     int x = 0;
+        //     int y = 10 / x;
+        // }
+        // catch (DivideByZeroException e)
+        // {
+        //     // Обработка исключения
+        //     Console.WriteLine("Произошло исключение: " + e.Message);
+        // }
+        // finally
+        // {
+        //     // Код, который выполняется независимо от того, произошло исключение или нет
+        //     Console.WriteLine("Блок finally выполнен.");
+        // }
+        
+        
+        
+        //2.	Создать класс SIS_SCHIS выполняющий переход с десятичного А
+        // (10^10) числа на двоичный, и создать функция-члена определяющий количество 0 и 1 двоичного числа.
+        
+        // using System;
+        // using System.Numerics;
+        
+        // public class SIS_SCHIS
+        // {
+        //     protected long number;
+        
+        //     public SIS_SCHIS(long number)
+        //     {
+        //         this.number = number;
+        //     }
+        
+        //     public string ToBinary()
+        //     {
+        //         return Convert.ToString(number, 2);
+        //     }
+        
+        //     public (int Zeros, int Ones) CountZerosAndOnes()
+        //     {
+        //         string binary = ToBinary();
+        //         int zeros = binary.Split('0').Length - 1;
+        //         int ones = binary.Split('1').Length - 1;
+        //         return (zeros, ones);
+        //     }
+        // }
+        
+        // public class SDVIG : SIS_SCHIS
+        // {
+        //     public SDVIG(long number) : base(number) { }
+        
+        //     public long ShiftLeft(int positions)
+        //     {
+        //         return number << positions;
+        //     }
+        
+        //     public long ShiftRight(int positions)
+        //     {
+        //         return number >> positions;
+        //     }
+        // }
+        
+        // class Program
+        // {
+        //     static void Main()
+        //     {
+        //         // Создаем новый объект класса SIS_SCHIS
+        //         SIS_SCHIS num = new SIS_SCHIS(1024);
+        //         Console.WriteLine("Двоичное представление: " + num.ToBinary());
+        //         var (zeros, ones) = num.CountZerosAndOnes();
+        //         Console.WriteLine("Количество нулей: " + zeros);
+        //         Console.WriteLine("Количество единиц: " + ones);
+        
+        //         // Создаем новый объект класса SDVIG
+        //         SDVIG numShift = new SDVIG(1024);
+        //         Console.WriteLine("Сдвиг влево: " + numShift.ShiftLeft(1));
+        //         Console.WriteLine("Сдвиг вправо: " + numShift.ShiftRight(1));
+        //     }
+        // }
+        
+        
+        //3.	Создать производный класс SDVIG базового класса SIS_SCHIS и 
+        //создать функция-члена определяющий операции сдвиг “<<” и “>>” данному числах 
+        //N числа заданного десятичного числа на втором вопросе.
+        
+        // using System;
+        
+        // public class SIS_SCHIS
+        // {
+        //     protected long number;
+        
+        //     public SIS_SCHIS(long number)
+        //     {
+        //         this.number = number;
+        //     }
+        
+        //     public string ToBinary()
+        //     {
+        //         return Convert.ToString(number, 2);
+        //     }
+        
+        //     public (int Zeros, int Ones) CountZerosAndOnes()
+        //     {
+        //         string binary = ToBinary();
+        //         int zeros = binary.Split('0').Length - 1;
+        //         int ones = binary.Split('1').Length - 1;
+        //         return (zeros, ones);
+        //     }
+        // }
+        
+        // public class SDVIG : SIS_SCHIS
+        // {
+        //     public SDVIG(long number) : base(number) { }
+        
+        //     public long ShiftLeft(int positions)
+        //     {
+        //         return number << positions;
+        //     }
+        
+        //     public long ShiftRight(int positions)
+        //     {
+        //         return number >> positions;
+        //     }
+        // }
+        
+        // class Program
+        // {
+        //     static void Main()
+        //     {
+        //         // Создаем новый объект класса SIS_SCHIS
+        //         SIS_SCHIS num = new SIS_SCHIS(1024);
+        //         Console.WriteLine("Двоичное представление: " + num.ToBinary());
+        //         var (zeros, ones) = num.CountZerosAndOnes();
+        //         Console.WriteLine("Количество нулей: " + zeros);
+        //         Console.WriteLine("Количество единиц: " + ones);
+        
+        //         // Создаем новый объект класса SDVIG
+        //         SDVIG numShift = new SDVIG(1024);
+        //         Console.WriteLine("Сдвиг влево: " + numShift.ShiftLeft(1));
+        //         Console.WriteLine("Сдвиг вправо: " + numShift.ShiftRight(1));
+        //     }
+        // }
+        
+                     -->
+                </div>
+        
+                <div class="task4">
+                    <!-- 
+                        
+        //4.1.	Полиморфизм. Виртуальные функции.
+        
+        // // Базовый класс
+        // public abstract class Animal
+        // {
+        //     public abstract void Speak();
+        // }
+        
+        // // Производный класс
+        // public class Dog : Animal
+        // {
+        //     public override void Speak()
+        //     {
+        //         Console.WriteLine("Гав!");
+        //     }
+        // }
+        
+        // // Еще один производный класс
+        // public class Cat : Animal
+        // {
+        //     public override void Speak()
+        //     {
+        //         Console.WriteLine("Мяу!");
+        //     }
+        // }
+        
+        // class Program
+        // {
+        //     static void Main()
+        //     {
+        //         // Создаем объекты классов Dog и Cat
+        //         Animal myDog = new Dog();
+        //         Animal myCat = new Cat();
+        
+        //         // Вызываем метод Speak для каждого объекта
+        //         myDog.Speak();  // Выводит "Гав!"
+        //         myCat.Speak();  // Выводит "Мяу!"
+        //     }
+        // }
+        
+        
+        
+        //4.2.	Создать класс M_CHLEN описывающий многочлен заданного степенью и 
+        //с коэффициентами многочлена и вычисляющий результат многочлена.
+        
+        // using System;
+        
+        // public class M_CHLEN
+        // {
+        //     private double[] coefficients;
+        
+        //     public M_CHLEN(double[] coefficients)
+        //     {
+        //         this.coefficients = coefficients;
+        //     }
+        
+        //     public double Calculate(double x)
+        //     {
+        //         double result = 0;
+        //         for (int i = 0; i < coefficients.Length; i++)
+        //         {
+        //             result += coefficients[i] * Math.Pow(x, i);
+        //         }
+        //         return result;
+        //     }
+        // }
+        
+        // class Program
+        // {
+        //     static void Main()
+        //     {
+        //         // Создаем новый объект класса M_CHLEN
+        //         M_CHLEN polynomial = new M_CHLEN(new double[] { 1, 2, 3 });  // Многочлен 1 + 2x + 3x^2
+        
+        //         // Вычисляем значение многочлена для x = 2
+        //         double result = polynomial.Calculate(2);
+        //         Console.WriteLine("Результат: " + result);
+        //     }
+        // }
+        
+        
+        //4.3.	Создать производный класс RESULT базового класса M_CHLEN и определить функция-член, 
+        //определяющий производные n-го порядка заданного многочлена и вычисляющий результат производного.
+        
+        // using System;
+        
+        // public class SIS_SCHIS
+        // {
+        //     protected double[] coefficients;
+        
+        //     public SIS_SCHIS(double[] coefficients)
+        //     {
+        //         this.coefficients = coefficients;
+        //     }
+        
+        //     public string ToBinary()
+        //     {
+        //         return Convert.ToString((long)coefficients[0], 2);
+        //     }
+        
+        //     public (int Zeros, int Ones) CountZerosAndOnes()
+        //     {
+        //         string binary = ToBinary();
+        //         int zeros = binary.Split('0').Length - 1;
+        //         int ones = binary.Split('1').Length - 1;
+        //         return (zeros, ones);
+        //     }
+        // }
+        
+        // public class RESULT : SIS_SCHIS
+        // {
+        //     public RESULT(double[] coefficients) : base(coefficients) { }
+        
+        //     public double[] Derivative(int order)
+        //     {
+        //         double[] result = (double[])coefficients.Clone();
+        
+        //         for (int i = 0; i < order; i++)
+        //         {
+        //             for (int j = 0; j < result.Length - 1; j++)
+        //             {
+        //                 result[j] = result[j + 1] * (j + 1);
+        //             }
+        //             Array.Resize(ref result, result.Length - 1);
+        //         }
+        
+        //         return result;
+        //     }
+        
+        //     public double CalculateDerivative(double x, int order)
+        //     {
+        //         double[] derivativeCoefficients = Derivative(order);
+        //         double result = 0;
+        
+        //         for (int i = 0; i < derivativeCoefficients.Length; i++)
+        //         {
+        //             result += derivativeCoefficients[i] * Math.Pow(x, i);
+        //         }
+        
+        //         return result;
+        //     }
+        // }
+        
+        // class Program
+        // {
+        //     static void Main()
+        //     {
+        //         // Создаем новый объект класса SIS_SCHIS
+        //         SIS_SCHIS num = new SIS_SCHIS(new double[] { 1024 });
+        //         Console.WriteLine("Двоичное представление: " + num.ToBinary());
+        //         var (zeros, ones) = num.CountZerosAndOnes();
+        //         Console.WriteLine("Количество нулей: " + zeros);
+        //         Console.WriteLine("Количество единиц: " + ones);
+        
+        //         // Создаем новый объект класса RESULT
+        //         RESULT numShift = new RESULT(new double[] { 1024 });
+        //         Console.WriteLine("Производная первого порядка: " + numShift.CalculateDerivative(2, 1));
+        //     }
+        // }
+        
+                     -->
+                </div>
+        
+                <div class="task5">
+                    <!-- 
+                        //5,1.	Наследование на языке С#.
+        
+        // // Базовый класс
+        // public class Animal
+        // {
+        //     public string Name { get; set; }
+        
+        //     public void Eat()
+        //     {
+        //         Console.WriteLine(Name + " ест.");
+        //     }
+        // }
+        
+        // // Производный класс
+        // public class Dog : Animal
+        // {
+        //     public void Bark()
+        //     {
+        //         Console.WriteLine(Name + " гавкает.");
+        //     }
+        // }
+        
+        // class Program
+        // {
+        //     static void Main()
+        //     {
+        //         // Создаем новый объект класса Dog
+        //         Dog myDog = new Dog();
+        //         myDog.Name = "Бобик";
+        
+        //         // Вызываем методы класса Dog и базового класса Animal
+        //         myDog.Eat();
+        //         myDog.Bark();
+        //     }
+        // }
+        
+        
+        
+        //5,2.	Создать класс TRЕUGOLNIK определяющий можно ли построить треугольник с помощью заданных точек в
+        // декартовой системе координат, и определить функция-член, определяющий периметр и площадь треугольника.
+        
+        
+        // using System;
+        
+        // public class Point
+        // {
+        //     public double X { get; set; }
+        //     public double Y { get; set; }
+        
+        //     public Point(double x, double y)
+        //     {
+        //         X = x;
+        //         Y = y;
+        //     }
+        // }
+        
+        // public class TREUGOLNIK
+        // {
+        //     private Point A, B, C;
+        
+        //     public TREUGOLNIK(Point a, Point b, Point c)
+        //     {
+        //         A = a;
+        //         B = b;
+        //         C = c;
+        //     }
+        
+        //     private double Distance(Point p1, Point p2)
+        //     {
+        //         return Math.Sqrt(Math.Pow(p2.X - p1.X, 2) + Math.Pow(p2.Y - p1.Y, 2));
+        //     }
+        
+        //     public bool CanFormTriangle()
+        //     {
+        //         double AB = Distance(A, B);
+        //         double BC = Distance(B, C);
+        //         double CA = Distance(C, A);
+        
+        //         // Проверяем неравенство треугольника
+        //         return AB + BC > CA && AB + CA > BC && BC + CA > AB;
+        //     }
+        
+        //     public double Perimeter()
+        //     {
+        //         if (!CanFormTriangle())
+        //             throw new InvalidOperationException("Точки не могут образовать треугольник.");
+        
+        //         double AB = Distance(A, B);
+        //         double BC = Distance(B, C);
+        //         double CA = Distance(C, A);
+        
+        //         return AB + BC + CA;
+        //     }
+        
+        //     public double Area()
+        //     {
+        //         if (!CanFormTriangle())
+        //             throw new InvalidOperationException("Точки не могут образовать треугольник.");
+        
+        //         double AB = Distance(A, B);
+        //         double BC = Distance(B, C);
+        //         double CA = Distance(C, A);
+        
+        //         // Используем формулу Герона для вычисления площади
+        //         double s = (AB + BC + CA) / 2;
+        //         return Math.Sqrt(s * (s - AB) * (s - BC) * (s - CA));
+        //     }
+        // }
+        
+        // class Program
+        // {
+        //     static void Main()
+        //     {
+        //         // Создаем новые точки
+        //         Point A = new Point(0, 0);
+        //         Point B = new Point(0, 1);
+        //         Point C = new Point(1, 0);
+        
+        //         // Создаем новый объект класса TREUGOLNIK
+        //         TREUGOLNIK triangle = new TREUGOLNIK(A, B, C);
+        
+        //         // Проверяем, можно ли построить треугольник, и вычисляем его периметр и площадь
+        //         if (triangle.CanFormTriangle())
+        //         {
+        //             Console.WriteLine("Периметр треугольника: " + triangle.Perimeter());
+        //             Console.WriteLine("Площадь треугольника: " + triangle.Area());
+        //         }
+        //         else
+        //         {
+        //             Console.WriteLine("Точки не могут образовать треугольник.");
+        //         }
+        //     }
+        // }
+        
+        
+        //5.3.	Создать производный класс VICHISLI базового класса TRЕUGOLNIK и определить функция-член, определяющий медианы,
+        // высоты, биссектрисы, радиусы окружности, описанные и выписанные в треугольнике на втором вопросе.
+        
+        // using System;
+        
+        // public class Point
+        // {
+        //     public double X { get; set; }
+        //     public double Y { get; set; }
+        
+        //     public Point(double x, double y)
+        //     {
+        //         X = x;
+        //         Y = y;
+        //     }
+        // }
+        
+        // public class TREUGOLNIK
+        // {
+        //     protected Point A, B, C;
+        
+        //     public TREUGOLNIK(Point a, Point b, Point c)
+        //     {
+        //         A = a;
+        //         B = b;
+        //         C = c;
+        //     }
+        
+        //     protected double Distance(Point p1, Point p2)
+        //     {
+        //         return Math.Sqrt(Math.Pow(p2.X - p1.X, 2) + Math.Pow(p2.Y - p1.Y, 2));
+        //     }
+        
+        //     public bool CanFormTriangle()
+        //     {
+        //         double AB = Distance(A, B);
+        //         double BC = Distance(B, C);
+        //         double CA = Distance(C, A);
+        
+        //         // Проверяем неравенство треугольника
+        //         return AB + BC > CA && AB + CA > BC && BC + CA > AB;
+        //     }
+        // }
+        
+        // public class VICHISLI : TREUGOLNIK
+        // {
+        //     public VICHISLI(Point a, Point b, Point c) : base(a, b, c) { }
+        
+        //     public double Median()
+        //     {
+        //         double AB = Distance(A, B);
+        //         double BC = Distance(B, C);
+        //         double CA = Distance(C, A);
+        
+        //         // Вычисляем медиану
+        //         return 0.5 * Math.Sqrt(2 * BC * BC + 2 * CA * CA - AB * AB);
+        //     }
+        
+        //     public double Height()
+        //     {
+        //         double AB = Distance(A, B);
+        //         double BC = Distance(B, C);
+        //         double CA = Distance(C, A);
+        
+        //         // Вычисляем высоту
+        //         double p = (AB + BC + CA) / 2;
+        //         return 2 * Math.Sqrt(p * (p - AB) * (p - BC) * (p - CA)) / AB;
+        //     }
+        
+        //     public double Bisector()
+        //     {
+        //         double AB = Distance(A, B);
+        //         double BC = Distance(B, C);
+        //         double CA = Distance(C, A);
+        
+        //         // Вычисляем биссектрису
+        //         return Math.Sqrt(BC * CA * (BC + CA) / (BC + CA)) - AB;
+        //     }
+        
+        //     public double Inradius()
+        //     {
+        //         double AB = Distance(A, B);
+        //         double BC = Distance(B, C);
+        //         double CA = Distance(C, A);
+        
+        //         // Вычисляем радиус вписанной окружности
+        //         double p = (AB + BC + CA) / 2;
+        //         return Math.Sqrt((p - AB) * (p - BC) * (p - CA) / p);
+        //     }
+        
+        //     public double Circumradius()
+        //     {
+        //         double AB = Distance(A, B);
+        //         double BC = Distance(B, C);
+        //         double CA = Distance(C, A);
+        
+        //         // Вычисляем радиус описанной окружности
+        //         return AB * BC * CA / (4 * Math.Sqrt((AB + BC + CA) * (BC + CA - AB) * (CA + AB - BC) * (AB + BC - CA)));
+        //     }
+        // }
+        
+        // class Program
+        // {
+        //     static void Main()
+        //     {
+        //         // Создаем новые точки
+        //         Point A = new Point(0, 0);
+        //         Point B = new Point(0, 1);
+        //         Point C = new Point(1, 0);
+        
+        //         // Создаем новый объект класса VICHISLI
+        //         VICHISLI triangle = new VICHISLI(A, B, C);
+        
+        //         // Вычисляем и выводим медиану, высоту, биссектрису, радиус вписанной и описанной окружностей
+        //         Console.WriteLine("Медиана: " + triangle.Median());
+        //         Console.WriteLine("Высота: " + triangle.Height());
+        //         Console.WriteLine("Биссектриса: " + triangle.Bisector());
+        //         Console.WriteLine("Радиус вписанной окружности: " + triangle.Inradius());
+        //         Console.WriteLine("Радиус описанной окружности: " + triangle.Circumradius());
+        //     }
+        // }
+        
+        
+                     -->
+                </div>
+            </div>
+    
+    
+    
+    
+    <div class="oop2">
+        <div class="task1 1">
+            <!-- public class Время
+{
+    private int часы;
+    private int минуты;
+    private int секунды;
+
+    // Конструктор по умолчанию
+    public Время()
+    {
+        часы = 0;
+        минуты = 0;
+        секунды = 0;
+    }
+
+    // Конструктор копирования
+    public Время(Время другое)
+    {
+        часы = другое.часы;
+        минуты = другое.минуты;
+        секунды = другое.секунды;
+    }
+
+    // Конструктор с несколькими параметрами
+    public Время(int часы, int минуты, int секунды)
+    {
+        this.часы = часы;
+        this.минуты = минуты;
+        this.секунды = секунды;
+    }
+
+    // Функции получения значений закрытых данных-членов
+    public int ПолучитьЧасы() => часы;
+    public int ПолучитьМинуты() => минуты;
+    public int ПолучитьСекунды() => секунды;
+
+    // Функции задания значений закрытым данным-членам
+    public void ЗадатьЧасы(int часы) => this.часы = часы;
+    public void ЗадатьМинуты(int минуты) => this.минуты = минуты;
+    public void ЗадатьСекунды(int секунды) => this.секунды = секунды;
+
+    // Функция для операции (суммировать, отнимать, …) двух времени.
+    public Время Сложить(Время другое)
+    {
+        int общиеСекунды = секунды + другое.секунды;
+        int общиеМинуты = минуты + другое.минуты + общиеСекунды / 60;
+        int общиеЧасы = часы + другое.часы + общиеМинуты / 60;
+        return new Время(общиеЧасы % 24, общиеМинуты % 60, общиеСекунды % 60);
+    }
+
+    // Деструктор
+    ~Время()
+    {
+        // Освобождение ресурсов
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Время время1 = new Время(10, 30, 0);
+        Время время2 = new Время(2, 45, 0);
+        Время сумма = время1.Сложить(время2);
+        Console.WriteLine($"Часы: {сумма.ПолучитьЧасы()}, Минуты: {сумма.ПолучитьМинуты()}, Секунды: {сумма.ПолучитьСекунды()}");
+    }
+} -->
+        </div>
+        <div class="task1 2">
+            <!-- using System;
+            using System.Windows.Forms;
+            
+            public abstract class CustomTextBox : TextBox
+            {
+                private bool updating = false;
+            
+                protected override void OnTextChanged(EventArgs e)
+                {
+                    if (updating) return;
+                    updating = true;
+            
+                    base.OnTextChanged(e);
+            
+                    if (Text.Length > 50)
+                    {
+                        Text = Text.Substring(1);
+                        SelectionStart = Text.Length;
+                    }
+                    else
+                    {
+                        HandleInput();
+                    }
+            
+                    updating = false;
+                }
+            
+                protected abstract void HandleInput();
+            }
+            
+            public class LatinTextBox : CustomTextBox
+            {
+                protected override void HandleInput()
+                {
+                    if (!string.IsNullOrEmpty(Text) && char.IsLetter(Text[Text.Length - 1]) && Text[Text.Length - 1] <= 'z')
+                    {
+                        Text += Text[Text.Length - 1];
+                        SelectionStart = Text.Length;
+                    }
+                }
+            }
+            
+            public class DigitTextBox : CustomTextBox
+            {
+                private static readonly string[] CyrillicNumbers = { "ноль", "один", "два", "три", "четыре", "пять", "шесть", "семь", "восемь", "девять" };
+            
+                protected override void HandleInput()
+                {
+                    if (!string.IsNullOrEmpty(Text) && char.IsDigit(Text[Text.Length - 1]))
+                    {
+                        Text += " " + CyrillicNumbers[Text[Text.Length - 1] - '0'];
+                        SelectionStart = Text.Length;
+                    }
+                }
+            }
+            
+            public class MainForm : Form
+            {
+                public MainForm()
+                {
+                    Controls.Add(new LatinTextBox { Location = new System.Drawing.Point(10, 10), Width = 200 });
+                   
+                    Controls.Add(new DigitTextBox { Location = new System.Drawing.Point(10, 70), Width = 200 });
+            
+                }
+            
+                [STAThread]
+                static void Main()
+                {
+                    Application.EnableVisualStyles();
+                    Application.SetCompatibleTextRenderingDefault(false);
+                    Application.Run(new MainForm());
+                }
+            } -->
+        </div>
+        <div class="task1 3">
+            <!-- using System;
+using System.Drawing;
+using System.Windows.Forms;
+
+public class Form1 : Form
+{
+    private PictureBox pictureBox1;
+
+    public Form1()
+    {
+        pictureBox1 = new PictureBox
+        {
+            Size = new Size(1000, 500),
+            Location = new Point(0, 0),
+        };
+        Controls.Add(pictureBox1);
+    }
+
+    protected override void OnLoad(EventArgs e)
+    {
+        base.OnLoad(e);
+
+        Bitmap flag = new Bitmap(1000, 500);
+        using (Graphics g = Graphics.FromImage(flag))
+        {
+            // Рисуем флаг Узбекистана
+            g.FillRectangle(Brushes.Blue, 0, 0, 1000, 166);
+            g.FillRectangle(Brushes.Red, 0, 166, 1000, 25);
+            g.FillRectangle(Brushes.White, 0, 191, 1000, 166);
+            g.FillRectangle(Brushes.Red, 0, 357, 1000, 25);
+            g.FillRectangle(Brushes.Green, 0, 382, 1000, 190);
+
+            // Рисуем белую луну и маленькие круги
+            g.FillEllipse(Brushes.White, 50, 50, 100, 100);
+
+            for (int i = 0; i < 3; i++)
+            {
+                g.FillEllipse(Brushes.White, 210, 50 + i * 30, 20, 20);
+            }
+            for (int i = 0; i < 4; i++)
+            {
+                g.FillEllipse(Brushes.White, 230, 35 + i * 30, 20, 20);
+            }
+            for (int i = 0; i < 5; i++)
+            {
+                g.FillEllipse(Brushes.White, 250, 20 + i * 30, 20, 20);
+            }
+        }
+
+        pictureBox1.Image = flag;
+    }
+
+    [STAThread]
+    static void Main()
+    {
+        Application.EnableVisualStyles();
+        Application.SetCompatibleTextRenderingDefault(false);
+        Application.Run(new Form1());
+    }
+} -->
+        </div>
+    
+    
+    
+   
+    
+    
+    </div>
+    <div class="oop2">
+        <div class="task2 1">
+            <!-- using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Дата дата = new Дата(1, 1, 2000);
+        Console.WriteLine("День: " + дата.ПолучитьДень());
+        Console.WriteLine("Месяц: " + дата.ПолучитьМесяц());
+        Console.WriteLine("Год: " + дата.ПолучитьГод());
+
+        дата.ДобавитьДни(10);
+        Console.WriteLine("Новый день после добавления 10 дней: " + дата.ПолучитьДень());
+    }
+}
+
+public class Дата
+{
+    private int день;
+    private int месяц;
+    private int год;
+
+    // Конструктор по умолчанию
+    public Дата()
+    {
+        день = 1;
+        месяц = 1;
+        год = 2000;
+    }
+
+    // Конструктор копирования
+    public Дата(Дата d)
+    {
+        день = d.день;
+        месяц = d.месяц;
+        год = d.год;
+    }
+
+    // Конструктор с несколькими параметрами
+    public Дата(int день, int месяц, int год)
+    {
+        this.день = день;
+        this.месяц = месяц;
+        this.год = год;
+    }
+
+    // Функции получения значений закрытых данных-членов
+    public int ПолучитьДень() { return день; }
+    public int ПолучитьМесяц() { return месяц; }
+    public int ПолучитьГод() { return год; }
+
+    // Функции задания значений закрытым данным-членам
+    public void ЗадатьДень(int день) { this.день = день; }
+    public void ЗадатьМесяц(int месяц) { this.месяц = месяц; }
+    public void ЗадатьГод(int год) { this.год = год; }
+
+    // Функция для операции (суммировать, отнимать, …) двух датами.
+    // Здесь приведен пример функции, которая добавляет количество дней к текущей дате.
+    public void ДобавитьДни(int дни)
+    {
+        день += дни;
+
+        // Здесь должна быть логика перехода на следующий месяц или год, если день превышает количество дней в месяце
+    }
+
+    // Деструктор 
+    ~Дата()
+    {
+        // Здесь можно освободить ресурсы, если они используются
+    }
+} -->
+
+        </div>
+        <div class="task2 2">
+            <!-- using System;
+            using System.Windows.Forms;
+            
+            public abstract class CustomTextBox : TextBox
+            {
+                private bool updating = false;
+            
+                protected override void OnTextChanged(EventArgs e)
+                {
+                    if (updating) return;
+                    updating = true;
+            
+                    base.OnTextChanged(e);
+            
+                    if (Text.Length > 50)
+                    {
+                        Text = Text.Substring(1);
+                        SelectionStart = Text.Length;
+                    }
+                    else
+                    {
+                        HandleInput();
+                    }
+            
+                    updating = false;
+                }
+            
+                protected abstract void HandleInput();
+            }
+            
+            public class LatinTextBox : CustomTextBox
+            {
+                protected override void HandleInput()
+                {
+                    if (!string.IsNullOrEmpty(Text) && char.IsLetter(Text[Text.Length - 1]) && Text[Text.Length - 1] <= 'z')
+                    {
+                        Text += $" ({(int)Text[Text.Length - 1]})";
+                        SelectionStart = Text.Length;
+                    }
+                }
+            }
+            
+            public class DigitTextBox : CustomTextBox
+            {
+                private static readonly string[] numbers = { "ноль", "один", "два", "три", "четыре", "пять", "шесть", "семь", "восемь", "девять" };
+            
+                protected override void HandleInput()
+                {
+                    if (!string.IsNullOrEmpty(Text) && char.IsDigit(Text[Text.Length - 1]))
+                    {
+                        Text += $" ({numbers[Text[Text.Length - 1] - '0']})";
+                        SelectionStart = Text.Length;
+                    }
+                }
+            }
+            
+            public class MainForm : Form
+            {
+                public MainForm()
+                {
+                    Controls.Add(new LatinTextBox { Location = new System.Drawing.Point(10, 10), Width = 200 });
+            
+                    Controls.Add(new DigitTextBox { Location = new System.Drawing.Point(10, 70), Width = 200 });
+              
+                }
+            
+                [STAThread]
+                static void Main()
+                {
+                    Application.EnableVisualStyles();
+                    Application.SetCompatibleTextRenderingDefault(false);
+                    Application.Run(new MainForm());
+                }
+            } -->
+             
+        </div>
+        <div class="task2 3">
+            <!-- using System;
+using System.Drawing;
+using System.Windows.Forms;
+
+public class Form1 : Form
+{
+    private PictureBox pictureBox1;
+
+    public Form1()
+    {
+        pictureBox1 = new PictureBox
+        {
+            Size = new Size(1000, 500),
+            Location = new Point(0, 0),
+        };
+        Controls.Add(pictureBox1);
+    }
+
+    protected override void OnLoad(EventArgs e)
+    {
+        base.OnLoad(e);
+
+        Bitmap flag = new Bitmap(1000, 500);
+        using (Graphics g = Graphics.FromImage(flag))
+        {
+            // Рисуем флаг
+            for (int i = 0; i < 13; i++)
+            {
+                Brush brush = i % 2 == 0 ? Brushes.Red : Brushes.White;
+                g.FillRectangle(brush, 0, i * 500 / 13, 1000, 500 / 13);
+            }
+
+            // Рисуем Union Jack в верхнем левом углу
+            g.FillRectangle(Brushes.DarkBlue, 0, 0, 400, 500 / 13 * 7);
+            for (int i = 0; i < 9; i++)
+            {
+                Pen pen = i % 2 == 0 ? Pens.White : Pens.Red;
+                g.DrawLine(pen, 200, 500 / 13 * 7 / 8 * i, 200 + 400 / 8 * i, 0);
+                g.DrawLine(pen, 200, 500 / 13 * 7 - 500 / 13 * 7 / 8 * i, 200 + 400 / 8 * i, 0);
+                g.DrawLine(pen, 200, 500 / 13 * 7 / 8 * i, 400 - 400 / 8 * i, 0);
+                g.DrawLine(pen, 200, 500 / 13 * 7 - 500 / 13 * 7 / 8 * i, 400 - 400 / 8 * i, 0);
+            }
+        }
+
+        pictureBox1.Image = flag;
+    }
+
+    [STAThread]
+    static void Main()
+    {
+        Application.EnableVisualStyles();
+        Application.SetCompatibleTextRenderingDefault(false);
+        Application.Run(new Form1());
+    }
+} -->
+        </div>
+        
+        
+        <div class="task3 1">
+                <!-- public class Program
+                {
+                    static void Main(string[] args)
+                    {
+                        РациональноеЧисло число1 = new РациональноеЧисло(1, 2, 3);
+                        РациональноеЧисло число2 = new РациональноеЧисло(4, 5, 6);
+                        РациональноеЧисло результат = число1.Сложить(число2);
+                
+                        System.Console.WriteLine("Результат: {0} {1}/{2}", результат.ПолучитьЦелое(), результат.ПолучитьЧислитель(), результат.ПолучитьЗнаменатель());
+                    }
+                }
+                
+                public class РациональноеЧисло
+                {
+                    private int целое;
+                    private int числитель;
+                    private int знаменатель;
+                
+                    // Конструктор по умолчанию
+                    public РациональноеЧисло()
+                    {
+                        целое = 0;
+                        числитель = 0;
+                        знаменатель = 1;
+                    }
+                
+                    // Конструктор копирования
+                    public РациональноеЧисло(РациональноеЧисло другое)
+                    {
+                        целое = другое.целое;
+                        числитель = другое.числитель;
+                        знаменатель = другое.знаменатель;
+                    }
+                
+                    // Конструктор с несколькими параметрами
+                    public РациональноеЧисло(int целое, int числитель, int знаменатель)
+                    {
+                        this.целое = целое;
+                        this.числитель = числитель;
+                        this.знаменатель = знаменатель != 0 ? знаменатель : 1;
+                    }
+                
+                    // Функции получения значений закрытых данных-членов
+                    public int ПолучитьЦелое() => целое;
+                    public int ПолучитьЧислитель() => числитель;
+                    public int ПолучитьЗнаменатель() => знаменатель;
+                
+                    // Функции задания значений закрытым данным-членам
+                    public void ЗадатьЦелое(int целое) => this.целое = целое;
+                    public void ЗадатьЧислитель(int числитель) => this.числитель = числитель;
+                    public void ЗадатьЗнаменатель(int знаменатель) => this.знаменатель = знаменатель != 0 ? знаменатель : 1;
+                
+                    // Функция для операции (суммировать, отнимать, …) двух рациональных чисел
+                    public РациональноеЧисло Сложить(РациональноеЧисло другое)
+                    {
+                        int общийЗнаменатель = знаменатель * другое.знаменатель;
+                        int общийЧислитель = целое * знаменатель + числитель * другое.знаменатель + другое.целое * знаменатель + другое.числитель * знаменатель;
+                        return new РациональноеЧисло(общийЧислитель / общийЗнаменатель, общийЧислитель % общийЗнаменатель, общийЗнаменатель);
+                    }
+                
+                    // Деструктор
+                    ~РациональноеЧисло()
+                    {
+                        // Освобождение ресурсов
+                    }
+                } -->
+        </div>
+        <div class="task3 2">
+            <!-- using System;
+            using System.Windows.Forms;
+            
+            public abstract class CustomTextBox : TextBox
+            {
+                private bool updating = false;
+            
+                protected override void OnTextChanged(EventArgs e)
+                {
+                    if (updating) return;
+                    updating = true;
+            
+                    base.OnTextChanged(e);
+            
+                    if (Text.Length > 50)
+                    {
+                        Text = Text.Substring(1);
+                        SelectionStart = Text.Length;
+                    }
+                    else
+                    {
+                        HandleInput();
+                    }
+            
+                    updating = false;
+                }
+            
+                protected abstract void HandleInput();
+            }
+            
+            public class LatinTextBox : CustomTextBox
+            {
+                protected override void HandleInput()
+                {
+                    if (!string.IsNullOrEmpty(Text) && char.IsLetter(Text[Text.Length - 1]) && Text[Text.Length - 1] <= 'z')
+                    {
+                        Text += " " + ((int)Text[Text.Length - 1]).ToString();
+                        SelectionStart = Text.Length;
+                    }
+                }
+            }
+            
+            public class DigitTextBox : CustomTextBox
+            {
+                private static readonly string[] EnglishNumbers = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
+            
+                protected override void HandleInput()
+                {
+                    if (!string.IsNullOrEmpty(Text) && char.IsDigit(Text[Text.Length - 1]))
+                    {
+                        Text += " " + EnglishNumbers[Text[Text.Length - 1] - '0'];
+                        SelectionStart = Text.Length;
+                    }
+                }
+            }
+            
+            public class MainForm : Form
+            {
+                public MainForm()
+                {
+                    Controls.Add(new LatinTextBox { Location = new System.Drawing.Point(10, 10), Width = 200 });
+                    Controls.Add(new LatinTextBox { Location = new System.Drawing.Point(10, 40), Width = 200 });
+                    Controls.Add(new DigitTextBox { Location = new System.Drawing.Point(10, 70), Width = 200 });
+                    Controls.Add(new DigitTextBox { Location = new System.Drawing.Point(10, 100), Width = 200 });
+                }
+            
+                [STAThread]
+                static void Main()
+                {
+                    Application.EnableVisualStyles();
+                    Application.SetCompatibleTextRenderingDefault(false);
+                    Application.Run(new MainForm());
+                }
+            } -->
+        </div>
+        <div class="task3 3">
+                <!-- using System;
+                using System.Drawing;
+                using System.Windows.Forms;
+                
+                public class Form1 : Form
+                {
+                    private PictureBox pictureBox1;
+                
+                    public Form1()
+                    {
+                        pictureBox1 = new PictureBox
+                        {
+                            Size = new Size(1000, 500),
+                            Location = new Point(0, 0),
+                        };
+                        Controls.Add(pictureBox1);
+                    }
+                
+                    protected override void OnLoad(EventArgs e)
+                    {
+                        base.OnLoad(e);
+                
+                        Bitmap flag = new Bitmap(1000, 500);
+                        using (Graphics g = Graphics.FromImage(flag))
+                        {
+                            // Рисуем флаг
+                            g.FillRectangle(Brushes.White, 0, 0, 1000, 500);
+                            g.FillRectangle(Brushes.Red, 0, 0, 1000, 38);
+                            g.FillRectangle(Brushes.Red, 0, 462, 1000, 38);
+                            for (int i = 0; i < 13; i++)
+                            {
+                                g.FillRectangle(i % 2 == 0 ? Brushes.Red : Brushes.White, 0, i * 38, 1000, 38);
+                            }
+                            g.FillRectangle(Brushes.Blue, 0, 0, 400, 260);
+                
+                            // Рисуем звезды
+                            for (int i = 0; i < 5; i++)
+                            {
+                                for (int j = 0; j < 6; j++)
+                                {
+                                    DrawStar(g, Brushes.White, 40 + j * 64, 22 + i * 48, 20, 5);
+                                }
+                            }
+                            for (int i = 0; i < 4; i++)
+                            {
+                                for (int j = 0; j < 5; j++)
+                                {
+                                    DrawStar(g, Brushes.White, 72 + j * 64, 46 + i * 48, 20, 5);
+                                }
+                            }
+                        }
+                
+                        pictureBox1.Image = flag;
+                    }
+                
+                    private void DrawStar(Graphics g, Brush brush, float x, float y, float radius, int points)
+                    {
+                        double angle = Math.PI / points;
+                        PointF[] vertices = new PointF[2 * points];
+                        for (int i = 0; i < 2 * points; i++)
+                        {
+                            double r = radius * (i % 2 == 0 ? 1 : 0.4);
+                            vertices[i] = new PointF(x + (float)(r * Math.Cos(i * angle)), y + (float)(r * Math.Sin(i * angle)));
+                        }
+                        g.FillPolygon(brush, vertices);
+                    }
+                
+                    [STAThread]
+                    static void Main()
+                    {
+                        Application.EnableVisualStyles();
+                        Application.SetCompatibleTextRenderingDefault(false);
+                        Application.Run(new Form1());
+                    }
+                } -->
+        </div>
+        
+        <div class="task4 1">
+            <!-- public class КомплексноеЧисло
+{
+    private double действительное;
+    private double мнимое;
+
+    public КомплексноеЧисло()
+    {
+        действительное = 0;
+        мнимое = 0;
+    }
+
+    public КомплексноеЧисло(КомплексноеЧисло другое)
+    {
+        действительное = другое.действительное;
+        мнимое = другое.мнимое;
+    }
+
+    public КомплексноеЧисло(double действительное, double мнимое)
+    {
+        this.действительное = действительное;
+        this.мнимое = мнимое;
+    }
+
+    public double ПолучитьДействительное() => действительное;
+    public double ПолучитьМнимое() => мнимое;
+
+    public void ЗадатьДействительное(double действительное) => this.действительное = действительное;
+    public void ЗадатьМнимое(double мнимое) => this.мнимое = мнимое;
+
+    public КомплексноеЧисло Сложить(КомплексноеЧисло другое)
+    {
+        return new КомплексноеЧисло(действительное + другое.действительное, мнимое + другое.мнимое);
+    }
+
+    ~КомплексноеЧисло()
+    {
+        // Освобождение ресурсов
+    }
+}
+
+public class Program
+{
+    static void Main(string[] args)
+    {
+        try
+        {
+            КомплексноеЧисло число1 = new КомплексноеЧисло(1, 2);
+            КомплексноеЧисло число2 = new КомплексноеЧисло(3, 4);
+            КомплексноеЧисло результат = число1.Сложить(число2);
+
+            System.Console.WriteLine("Результат: {0} + {1}i", результат.ПолучитьДействительное(), результат.ПолучитьМнимое());
+        }
+        catch (Exception ex)
+        {
+            System.Console.WriteLine("Произошла ошибка: " + ex.Message);
+        }
+    }
+} -->
+        </div>
+        <div class="task4 2">
+                <!-- using System;
+                using System.Windows.Forms;
+                
+                public abstract class CustomTextBox : TextBox
+                {
+                    private bool updating = false;
+                
+                    protected override void OnTextChanged(EventArgs e)
+                    {
+                        if (updating) return;
+                        updating = true;
+                
+                        base.OnTextChanged(e);
+                
+                        if (Text.Length > 50)
+                        {
+                            Text = Text.Substring(1);
+                            SelectionStart = Text.Length;
+                        }
+                        else
+                        {
+                            HandleInput();
+                        }
+                
+                        updating = false;
+                    }
+                
+                    protected abstract void HandleInput();
+                }
+                
+                public class LatinTextBox : CustomTextBox
+                {
+                    protected override void HandleInput()
+                    {
+                        if (!string.IsNullOrEmpty(Text) && char.IsLetter(Text[Text.Length - 1]) && Text[Text.Length - 1] <= 'z')
+                        {
+                            Text += Text[Text.Length - 1].ToString() + Text[Text.Length - 1].ToString();
+                            SelectionStart = Text.Length;
+                        }
+                    }
+                }
+                
+                public class DigitTextBox : CustomTextBox
+                {
+                    private static readonly string[] LatinNumbers = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
+                
+                    protected override void HandleInput()
+                    {
+                        if (!string.IsNullOrEmpty(Text) && char.IsDigit(Text[Text.Length - 1]))
+                        {
+                            Text += " " + LatinNumbers[Text[Text.Length - 1] - '0'];
+                            SelectionStart = Text.Length;
+                        }
+                    }
+                }
+                
+                public class MainForm : Form
+                {
+                    public MainForm()
+                    {
+                        Controls.Add(new LatinTextBox { Location = new System.Drawing.Point(10, 10), Width = 200 });
+                        Controls.Add(new LatinTextBox { Location = new System.Drawing.Point(10, 40), Width = 200 });
+                        Controls.Add(new DigitTextBox { Location = new System.Drawing.Point(10, 70), Width = 200 });
+                        Controls.Add(new DigitTextBox { Location = new System.Drawing.Point(10, 100), Width = 200 });
+                    }
+                
+                    [STAThread]
+                    static void Main()
+                    {
+                        Application.EnableVisualStyles();
+                        Application.SetCompatibleTextRenderingDefault(false);
+                        Application.Run(new MainForm());
+                    }
+                } -->
+        </div>
+        <div class="task4 3">
+                <!-- using System;
+                using System.Drawing;
+                using System.Windows.Forms;
+                
+                public class Form1 : Form
+                {
+                    private PictureBox pictureBox1;
+                
+                    public Form1()
+                    {
+                        pictureBox1 = new PictureBox
+                        {
+                            Size = new Size(1000, 500),
+                            Location = new Point(0, 0),
+                        };
+                        Controls.Add(pictureBox1);
+                    }
+                
+                    protected override void OnLoad(EventArgs e)
+                    {
+                        base.OnLoad(e);
+                
+                        Bitmap flag = new Bitmap(1000, 500);
+                        using (Graphics g = Graphics.FromImage(flag))
+                        {
+                            // Рисуем флаг Великобритании
+                            g.FillRectangle(Brushes.White, 0, 0, 1000, 500);
+                            g.FillRectangle(Brushes.Red, 0, 200, 1000, 100);
+                            g.FillRectangle(Brushes.Red, 200, 0, 100, 500);
+                            g.FillRectangle(Brushes.Red, 700, 0, 100, 500);
+                            g.FillPolygon(Brushes.Blue, new Point[] { new Point(0, 0), new Point(1000, 0), new Point(1000, 500), new Point(0, 500), new Point(0, 0), new Point(200, 0), new Point(300, 500), new Point(700, 500), new Point(800, 0), new Point(200, 0) });
+                            g.FillPolygon(Brushes.Blue, new Point[] { new Point(0, 0), new Point(1000, 0), new Point(1000, 500), new Point(0, 500), new Point(0, 0), new Point(0, 200), new Point(500, 300), new Point(1000, 200), new Point(1000, 300), new Point(0, 200) });
+                        }
+                
+                        pictureBox1.Image = flag;
+                    }
+                
+                    [STAThread]
+                    static void Main()
+                    {
+                        Application.EnableVisualStyles();
+                        Application.SetCompatibleTextRenderingDefault(false);
+                        Application.Run(new Form1());
+                    }
+                } -->
+        </div>
+        
+        <div class="task5 1">
+            <!-- public class Многочлен
+{
+    private int степень;
+    private double[] коэффициенты;
+
+    public Многочлен()
+    {
+        степень = 0;
+        коэффициенты = new double[1] { 0 };
+    }
+
+    public Многочлен(Многочлен другой)
+    {
+        степень = другой.степень;
+        коэффициенты = new double[степень + 1];
+        for (int i = 0; i <= степень; i++)
+        {
+            коэффициенты[i] = другой.коэффициенты[i];
+        }
+    }
+
+    public Многочлен(int степень, double[] коэффициенты)
+    {
+        this.степень = степень;
+        this.коэффициенты = new double[степень + 1];
+        for (int i = 0; i <= степень; i++)
+        {
+            this.коэффициенты[i] = коэффициенты[i];
+        }
+    }
+
+    public double ВычислитьЗначение(double x)
+    {
+        double результат = 0;
+        for (int i = 0; i <= степень; i++)
+        {
+            результат += коэффициенты[i] * System.Math.Pow(x, i);
+        }
+        return результат;
+    }
+
+    public static Многочлен operator *(Многочлен многочлен, double число)
+    {
+        Многочлен результат = new Многочлен(многочлен);
+        for (int i = 0; i <= результат.степень; i++)
+        {
+            результат.коэффициенты[i] *= число;
+        }
+        return результат;
+    }
+
+    ~Многочлен()
+    {
+        // Освобождение ресурсов
+    }
+}
+
+public class Program
+{
+    static void Main(string[] args)
+    {
+        try
+        {
+            Многочлен многочлен = new Многочлен(2, new double[] { 1, 2, 3 });
+            double значение = многочлен.ВычислитьЗначение(2);
+            System.Console.WriteLine("Значение многочлена при x = 2: " + значение);
+
+            Многочлен умноженныйМногочлен = многочлен * 2;
+            значение = умноженныйМногочлен.ВычислитьЗначение(2);
+            System.Console.WriteLine("Значение умноженного многочлена при x = 2: " + значение);
+        }
+        catch (System.Exception ex)
+        {
+            System.Console.WriteLine("Произошла ошибка: " + ex.Message);
+        }
+    }
+} -->
+        </div>
+        <div class="task5 2">
+                <!-- using System;
+                using System.Windows.Forms;
+                
+                public abstract class CustomTextBox : TextBox
+                {
+                    private bool updating = false;
+                
+                    protected override void OnTextChanged(EventArgs e)
+                    {
+                        if (updating) return;
+                        updating = true;
+                
+                        base.OnTextChanged(e);
+                
+                        if (Text.Length > 50)
+                        {
+                            Text = Text.Substring(1);
+                            SelectionStart = Text.Length;
+                        }
+                        else
+                        {
+                            HandleInput();
+                        }
+                
+                        updating = false;
+                    }
+                
+                    protected abstract void HandleInput();
+                }
+                
+                public class LatinTextBox : CustomTextBox
+                {
+                    protected override void HandleInput()
+                    {
+                        if (!string.IsNullOrEmpty(Text) && char.IsLetter(Text[Text.Length - 1]) && Text[Text.Length - 1] <= 'z')
+                        {
+                            Text += Text[Text.Length - 1].ToString() + Text[Text.Length - 1].ToString();
+                            SelectionStart = Text.Length;
+                        }
+                    }
+                }
+                
+                public class DigitTextBox : CustomTextBox
+                {
+                    private static readonly string[] LatinNumbers = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
+                
+                    protected override void HandleInput()
+                    {
+                        if (!string.IsNullOrEmpty(Text) && char.IsDigit(Text[Text.Length - 1]))
+                        {
+                            Text += " " + LatinNumbers[Text[Text.Length - 1] - '0'];
+                            SelectionStart = Text.Length;
+                        }
+                    }
+                }
+                
+                public class MainForm : Form
+                {
+                    public MainForm()
+                    {
+                        Controls.Add(new LatinTextBox { Location = new System.Drawing.Point(10, 10), Width = 200 });
+                        Controls.Add(new LatinTextBox { Location = new System.Drawing.Point(10, 40), Width = 200 });
+                        Controls.Add(new DigitTextBox { Location = new System.Drawing.Point(10, 70), Width = 200 });
+                        Controls.Add(new DigitTextBox { Location = new System.Drawing.Point(10, 100), Width = 200 });
+                    }
+                
+                    [STAThread]
+                    static void Main()
+                    {
+                        Application.EnableVisualStyles();
+                        Application.SetCompatibleTextRenderingDefault(false);
+                        Application.Run(new MainForm());
+                    }
+                } -->
+        </div>
+        <div class="task5 3"></div>
+        
+    </div>
+</body>
+</html>
